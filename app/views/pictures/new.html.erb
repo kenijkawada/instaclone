@@ -1,0 +1,14 @@
+<%= form_with(model: @picture, local: true) do |form| %>
+  <div class="picture_image">
+  <%= form.label :image %>
+  <%= form.file_field :image, id: :picture_image %>
+  <%= form.hidden_field :image_cache %>
+  </div>
+  <div class="picture_content">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+  <div class="create-btn">
+  <%= form.submit %>
+  </div>
+<% end %>

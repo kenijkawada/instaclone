@@ -1,0 +1,28 @@
+<div class="form-signin">
+  <%= form_with(model: @picture, local: true, url: choose_new_or_edit) do |form| %>
+<% if @picture.errors.any? %>
+    <div id="error_explanation">
+      <h2>There are <%= @picture.errors.count %> errors.</h2>
+      <ul>
+
+      <% @picture.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+  <div class="picture_image">
+  <%= form.label :image ,class: "sr-only" , for: "image", lang: "en"%><br>
+  <%= form.file_field :image, id: :picture_image , id: "image", class: "form-control " ,lang: "en" ,placeholder: "icon"%>
+  <%= form.hidden_field :image_cache %><br>
+  </div>
+  <div class="picture_content">
+    <%= form.label :content , class: "sr-only" , for: "content"%><br>
+    <%= form.text_field :content , id: "name", class: "form-control" , placeholder: "content", size: "50"%><br>
+  </div>
+  <div class="create-btn">
+  <%= form.submit %>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,19 @@
+<div class="confirm-page">
+<h3>Send it with the following contents.</h3>
+
+<%= form_with(model: @picture, url: pictures_path, local: true) do |form| %>
+  <%= form.hidden_field :image %>
+  <%= form.hidden_field :content %>
+
+  <p><%= image_tag @picture.image %></p>
+  <%= hidden_field_tag :"cache[image]",@picture.image.cache_name %>
+  <p><%= @picture.content %></p>
+  <%= form.submit  "create" %>
+<% end %>
+
+<%= form_with(model: @picture, url: new_picture_path, local: true, method: 'get') do |form| %>
+  <%= form.hidden_field :image %>
+  <%= form.hidden_field :content %>
+  <%= form.submit "back" , name: 'back'%>
+<% end %>
+</div>

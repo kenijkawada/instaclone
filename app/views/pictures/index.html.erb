@@ -1,4 +1,15 @@
-<%= @pictures.each do |picture| %>
-    <%= image_tag picture.image %>
-    <%= picture.content %>
-<% end %>
+<div class="index-page">
+  <div class="mx-auto" style="width: 500px;">
+    <h3>PostList</h3>
+    <p><%= notice %></p>
+    <% @pictures.each do |picture| %>
+      <p><%= image_tag picture.image %></p>
+          <p><%= picture.content %></p>
+      <button type="button" class="btn btn-outline-secondary btn-sm"><%= link_to 'Show', picture_path(picture.id)%></button>
+      <% if picture.user == current_user %>
+        <button type="button" class="btn btn-outline-secondary btn-sm"><%= link_to "Edit", edit_picture_path(picture.id) %></button>
+        <button type="button" class="btn btn-outline-secondary btn-sm"><%= link_to 'Delete', picture_path(picture.id), method: :delete, data: { confirm: 'Can I really delete it?' } %></button><br>
+      <% end %>
+    <% end %>
+  </div>
+</div>

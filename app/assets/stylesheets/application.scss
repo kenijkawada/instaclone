@@ -1,0 +1,161 @@
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+header a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+header{
+  margin-bottom: 50px;
+}
+
+.content .btn{
+  text-decoration: none;
+}
+
+.contents{
+  display: inline-block;
+  margin:auto;
+}
+
+.signup-page{
+  background-color: #ffffff;
+  width: 100%;
+  text-align: center;
+}
+
+
+.top-content {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 300px;
+  padding-top:66.4%;
+  background-image: image-url("instagram-1936912_1280.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  margin:0;
+}
+
+.top-content::before{
+  background-color:rgba(0,0,0,0.2);
+  position:absolute;
+  top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	content: ' ';
+}
+
+
+.index-page, .show-page, .new-page, .edit-page, .confirm-page, .favorite-page, .user-show-page, .signup-page{
+  margin-top:100px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.session-page{
+  margin-top:200px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+
+.index-page button{
+  margin-bottom:70px;
+}
+
+.index-page h3{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.show-page h3{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.new-page h3{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.edit-page h3{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.confirm-page h3{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.user-show-page h3{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.favorite-page p{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+footer {
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+
+footer p{
+  text-align: center;
+  line-height: 60px;
+}
+
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

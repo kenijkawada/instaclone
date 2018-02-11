@@ -1,0 +1,9 @@
+<div class="user-show-page">
+<h3>Profile of <%= @user.name %></h3>
+
+<p><%= image_tag @user.icon.thumb.url %></p>
+
+<p>email: <%= @user.email %></p>
+
+<%= link_to 'My Favorites Post.', users_path %>
+</div>

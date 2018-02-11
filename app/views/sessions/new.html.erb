@@ -1,0 +1,16 @@
+<div class="session-page">
+  <p><%= notice %></p>
+<h1 class="h3 mb-3 font-weight-normal">Please login</h1>
+<div class="form-signin"><%= form_with(scope: :session, url: sessions_path) do |f| %>
+
+  <%= f.label :email ,class: "sr-only" , for: "inputEmail" %>
+  <%= f.email_field :email , id: "inputEmail", class: "form-control" , placeholder: "Email address"%><br>
+
+  <%= f.label :password , class: "sr-only" , for: "inputPassword" %>
+  <%= f.password_field :password ,id: "inputPassword", class: "form-control" , placeholder: "Password" %><br>
+
+
+    <%= f.submit "Login" ,class: "btn btn-lg btn-primary btn-block" %>
+<% end %>
+</div>
+</div>

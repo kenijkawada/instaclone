@@ -3,8 +3,9 @@
     <h3>PostList</h3>
     <p><%= notice %></p>
     <% @pictures.each do |picture| %>
+      <p class="picture_user_name"><%= picture.user.name %></p>
       <p><%= image_tag picture.image %></p>
-          <p><%= picture.content %></p>
+      <p><%= picture.content %></p>
       <button type="button" class="btn btn-outline-secondary btn-sm"><%= link_to 'Show', picture_path(picture.id)%></button>
       <% if picture.user == current_user %>
         <button type="button" class="btn btn-outline-secondary btn-sm"><%= link_to "Edit", edit_picture_path(picture.id) %></button>
